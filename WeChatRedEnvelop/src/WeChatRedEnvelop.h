@@ -1,4 +1,6 @@
 #pragma mark - Util
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface WCBizUtil : NSObject
 
@@ -316,3 +318,44 @@
 
 @end
 
+#pragma mark -- 7.0
+
+@interface MoreViewController : UIViewController
+@property(retain, nonatomic) UITableView *frontTableView;
+- (void)addHelperSection;
+@end
+
+@interface MMThemeManager : NSObject
++ (id)sharedThemeManager;
+- (id)imageNamed:(id)arg1;
+@end
+
+@interface WCTableViewManager : NSObject
+- (id)getTableView;
+- (void)clearAllSection;
+- (void)addSection:(id)arg1;
+- (void)insertSection:(id)arg1 At:(unsigned int)arg2;
+@end
+
+@interface WCTableViewSectionManager : NSObject
++ (id)defaultSection;
+- (void)addCell:(id)arg1;
+@end
+
+@interface WCTableViewCellManager
++ (id)switchCellForSel:(SEL)arg1 target:(id)arg2 title:(id)arg3 on:(_Bool)arg4;
+@end
+
+@interface WCTableViewNormalCellManager
++ (id)normalCellForSel:(SEL)arg1 target:(id)arg2 leftImage:(id)arg3 title:(id)arg4 badge:(id)arg5 WithDisclosureIndicator:(_Bool)arg6;
++ (id)normalCellForSel:(SEL)arg1 target:(id)arg2 title:(id)arg3 accessoryType:(long long)arg4;
++ (id)normalCellForSel:(SEL)arg1 target:(id)arg2 title:(id)arg3 rightValue:(id)arg4 accessoryType:(long long)arg5;
++ (id)normalCellForTitle:(id)arg1 rightValue:(id)arg2;
+
+@end
+
+@interface UiUtil : NSObject
++ (double)tabBarHeight;
++ (double)statusBarHeight;
++ (double)navigationBarHeight;
+@end
